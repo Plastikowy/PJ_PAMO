@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/temp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/_caloriesEditTextMass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Insert your mass in kg"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/_caloriesEditTextHeightCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:ems="10"
+            android:hint="Insert your height in cm"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/_caloriesEditTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:hint="Insert your age in years"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/_caloriesSubmitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Count calories" />
+
+        <TextView
+            android:id="@+id/_caloriesCaloriesScore"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/_caloriesRecipesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check recipes!!"
+            tools:visibility="invisible" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
