@@ -16,6 +16,12 @@
         app:srcCompat="@drawable/dogwelcome" />
 
     <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Quiz" />
+
+    <Button
         android:id="@+id/btnBMICalc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

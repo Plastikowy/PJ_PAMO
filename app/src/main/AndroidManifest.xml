@@ -19,6 +19,7 @@
         <activity android:name=".BMICalculator" />
         <activity android:name=".CaloriesCounter" />
         <activity android:name=".RecipesActivity" />
+        <activity android:name=".QuizActivity" />
     </application>
 
 </manifest>

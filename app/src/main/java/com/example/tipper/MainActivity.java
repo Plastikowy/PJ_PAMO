@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button _btnBMICalculator;
     private Button _btnCaloriesCounter;
+    private Button _btnQuiz;
     // called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         _btnBMICalculator = (Button) findViewById(R.id.btnBMICalc);
         _btnCaloriesCounter = (Button) findViewById(R.id.btnCaloriesCounter);
+        _btnQuiz = (Button) findViewById(R.id.btnQuiz);
 
         _btnBMICalculator.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 GoToCaloriesCounter();
             }
         });
+
+        _btnQuiz.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                GoToQuiz();
+            }
+        });
     }
 
     private void GoToBMICalculator(){
@@ -51,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void GoToCaloriesCounter(){
         Intent intent = new Intent(this, CaloriesCounter.class);
+        startActivity(intent);
+    }
+
+    private void GoToQuiz(){
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 }

@@ -27,7 +27,40 @@ public class QuizActivity extends AppCompatActivity {
 
         controller = new QuizController();
 
+        SetUpQuestionAndAnswer();
+
+        answer1btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                controller.Answer(0);
+                checkContinuityOfQuiz();
+            }
+        });
+
+        answer2btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                controller.Answer(1);
+                checkContinuityOfQuiz();
+            }
+        });
+    }
+
+    private void checkContinuityOfQuiz() {
+        if(controller.isFinished()){
+            questionTextView.setText("Udzieliłeś " + controller.getGoodAnswers() + " poprawnych odpowiedzi z " + controller.getQuestionsAndAnswers().size());
+            answer1btn.setVisibility(View.INVISIBLE);
+            answer2btn.setVisibility(View.INVISIBLE);
+        }
+        else{
+            SetUpQuestionAndAnswer();
+        }
+    }
+
+    private void SetUpQuestionAndAnswer(){
         questionTextView.setText(controller.GetCurrentQuestion());
+        answer1btn.setText(controller.GetCurrentAnswer1());
+        answer2btn.setText(controller.GetCurrentAnswer2());
     }
 
 }
