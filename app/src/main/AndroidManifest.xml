@@ -20,6 +20,7 @@
         <activity android:name=".CaloriesCounter" />
         <activity android:name=".RecipesActivity" />
         <activity android:name=".QuizActivity" />
+        <activity android:name=".CannonActivity" />
     </application>
 
 </manifest>

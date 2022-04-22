@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable; // for EditText event handling
-import android.text.TextWatcher; // EditText listener
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button _btnBMICalculator;
     private Button _btnCaloriesCounter;
     private Button _btnQuiz;
+    private Button _btnCannonGame;
     // called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         _btnBMICalculator = (Button) findViewById(R.id.btnBMICalc);
         _btnCaloriesCounter = (Button) findViewById(R.id.btnCaloriesCounter);
         _btnQuiz = (Button) findViewById(R.id.btnQuiz);
+        _btnCannonGame = (Button) findViewById(R.id.btnCannonGame);
 
         _btnBMICalculator.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 GoToQuiz();
             }
         });
+        _btnCannonGame.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                GoToCannonGame();
+            }
+        });
     }
 
     private void GoToBMICalculator(){
@@ -65,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void GoToQuiz(){
         Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
+
+    private void GoToCannonGame(){
+        Intent intent = new Intent(this, CannonActivity.class);
         startActivity(intent);
     }
 }
